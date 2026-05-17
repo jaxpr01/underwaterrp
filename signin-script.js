@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const DISCORD_CLIENT_ID = '1505077301547761716'; // Pon aquí tu Client ID de Discord
 // Si alojas la web en este mismo dominio, deja vacío para usar oauth-callback.html local
-const DISCORD_REDIRECT_URI = 'https://jaxpr01.github.io/UnderWater/oauth-callback.html'; // Ejemplo: 'https://tudominio.com/oauth-callback.html'
+const DISCORD_REDIRECT_URI = 'https://jaxpr01.github.io/underwaterrp/oauth-callback.html'; // Ejemplo: 'https://tudominio.com/oauth-callback.html'
 const DISCORD_OAUTH_SCOPE = 'identify email';
 
 // Inicializar background
