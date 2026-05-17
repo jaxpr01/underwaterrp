@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalos - UnderWater</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="gifts-styles.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-background"></div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">UW</div>
+                    <div>
+                        <div class="brand-title">UnderWater</div>
+                        <div class="brand-subtitle">Panel v2.0</div>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="avatar" id="profileAvatar">JA</div>
+                    <div>
+                        <div class="profile-name" id="profileName">jaxpr.a</div>
+                        <div class="profile-role">Usuario</div>
+                        <div class="profile-status"><span class="status-dot"></span><span id="profileDays">0d</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="perfil.html" class="nav-item">Mi Perfil</a>
+                <a href="normativas.html" class="nav-item">Normativas</a>
+                <a href="gifts.html" class="nav-item active">Regalos</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <div class="page-title">Regalos - Tienda de Recursos MTA</div>
+                    <div class="page-status"><span class="status-dot green"></span>Online</div>
+                </div>
+                <div class="cart-info">
+                    <button class="cart-button" onclick="viewCart()">
+                        🛒 Carrito
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="gifts-container">
+                <aside class="filters-sidebar">
+                    <h3 class="filter-title">FILTROS</h3>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">BUSCAR</label>
+                        <input type="text" id="searchInput" class="filter-search" placeholder="Buscar recursos...">
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">CATEGORÍA</label>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="scripts">Scripts</button>
+                            <button class="filter-btn" data-filter="maps">Mapas</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">RANGO DE PRECIO</label>
+                        <div class="price-range">
+                            <span class="price-min">$0</span>
+                            <input type="range" id="priceRange" min="0" max="50" value="50" class="range-slider">
+                            <span class="price-max">$50+</span>
+                        </div>
+                    </div>
+
+                    <button class="filter-clear" onclick="clearFilters()">Limpiar filtros</button>
+                </aside>
+
+                <div class="gifts-grid">
+                    <div id="giftsLoadingSpinner" class="loading-spinner" style="display:none;">
+                        <div class="spinner"></div>
+                    </div>
+                    <div id="giftsContent" class="gifts-list"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="panel.js"></script>
+    <script src="gifts-script.js"></script>
+</body>
+</html>

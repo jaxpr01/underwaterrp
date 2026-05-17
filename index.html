@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderWater Roleplay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Background dinámico -->
+        <div class="background" id="background"></div>
+
+        <!-- Contenido -->
+        <div class="content">
+            <!-- Badge superior -->
+            <div class="badge">
+                <span class="dot"></span>
+                UnderWater Roleplay
+            </div>
+
+            <!-- Título principal -->
+            <h1 class="main-title">
+                <span class="creativos">UnderWater</span>
+                <span class="roleplay">Roleplay</span>
+            </h1>
+
+            <!-- Descripción -->
+            <p class="description">
+                Únete a nuestro servidor de MTA y disfruta de un Roleplay realista.<br>
+                 trabajos, eventos y una comunidad en crecimiento.
+            </p>
+
+            <!-- Botón CTA -->
+            <button class="cta-button" onclick="handleClick()">
+                <span class="play-icon">▶</span>
+                Comienza tu aventura
+                <span class="arrow">→</span>
+            </button>
+
+            <!-- Contenedor de personajes -->
+            <div class="characters-container">
+                <div class="character left">
+                    <img src="character-left.png" alt="Personaje masculino" id="charLeft">
+                </div>
+                <div class="character right">
+                    <img src="character-right.png" alt="Personaje femenino" id="charRight">
+                </div>
+            </div>
+
+            <!-- Descubre más -->
+            <div class="discover-more">
+                <span>Descubre más</span>
+                <span class="chevron">⌄</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel de configuración (oculto, se abre con tecla C) -->
+    <div class="config-panel" id="configPanel">
+        <div class="config-header">
+            <h2>Configurar Background</h2>
+            <button class="close-btn" onclick="toggleConfig()">×</button>
+        </div>
+        <div class="config-content">
+            <div class="config-group">
+                <label>URL de imagen:</label>
+                <input type="text" id="bgUrl" placeholder="Ej: https://ejemplo.com/imagen.jpg">
+                <button onclick="updateBackground()">Aplicar</button>
+            </div>
+            <div class="config-group">
+                <label>Color de fondo:</label>
+                <input type="color" id="bgColor" value="#0a0e27">
+                <button onclick="updateBackgroundColor()">Aplicar</button>
+            </div>
+            <div class="config-group">
+                <label>Presets:</label>
+                <button onclick="setPreset('dark')">Oscuro</button>
+                <button onclick="setPreset('neon')">Neón</button>
+                <button onclick="setPreset('sunset')">Atardecer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

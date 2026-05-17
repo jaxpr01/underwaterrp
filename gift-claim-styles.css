@@ -1,0 +1,454 @@
+/* GIFT CLAIM PAGE STYLES */
+
+/* OPTIMIZED ANIMATIONS */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.claim-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeInUp 0.5s ease both;
+    will-change: opacity, transform;
+}
+
+.claim-summary,
+.claim-form {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.5px solid rgba(0, 255, 200, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.5s ease both;
+    transition: border-color 0.2s ease;
+}
+
+.claim-summary {
+    animation-delay: 0.05s;
+}
+
+.claim-form {
+    animation-delay: 0.1s;
+}
+
+.claim-summary:hover,
+.claim-form:hover {
+    border-color: rgba(0, 255, 200, 0.25);
+}
+
+.claim-summary h2,
+.claim-form h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.claim-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.claim-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    animation: slideInDown 0.4s ease both;
+}
+
+.claim-item:nth-child(1) { animation-delay: 0.01s; }
+.claim-item:nth-child(2) { animation-delay: 0.02s; }
+.claim-item:nth-child(3) { animation-delay: 0.03s; }
+.claim-item:nth-child(4) { animation-delay: 0.04s; }
+.claim-item:nth-child(5) { animation-delay: 0.05s; }
+
+.claim-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(0, 255, 200, 0.25);
+    transform: translateX(2px);
+}
+
+.claim-item-icon {
+    font-size: 36px;
+    min-width: 50px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+.claim-item-info {
+    flex: 1;
+}
+
+.claim-item-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.claim-item-desc {
+    font-size: 12px;
+    color: #9aa3c1;
+}
+
+.claim-item-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #00ffc8;
+    text-align: right;
+}
+
+.claim-item-qty {
+    font-size: 12px;
+    color: #6b7392;
+    text-align: right;
+}
+
+.claim-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    animation: slideInDown 0.5s ease both;
+    animation-delay: 0.2s;
+}
+
+.claim-total span:first-child {
+    color: #9aa3c1;
+}
+
+.claim-total span:last-child {
+    color: #00ffc8;
+    font-size: 20px;
+}
+
+/* FORM STYLES */
+
+.form-group {
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.15s; }
+.form-group:nth-child(3) { animation-delay: 0.2s; }
+.form-group:nth-child(4) { animation-delay: 0.25s; }
+.form-group:nth-child(5) { animation-delay: 0.3s; }
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #9aa3c1;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="tel"]::placeholder,
+.form-group textarea::placeholder {
+    color: #6b7392;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(0, 255, 200, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #00ffc8;
+    transition: all 0.3s ease;
+}
+
+.form-group.checkbox input[type="checkbox"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.form-group.checkbox label {
+    margin: 0;
+    text-transform: none;
+    font-size: 13px;
+    cursor: pointer;
+    color: #9aa3c1;
+    transition: color 0.2s ease;
+}
+
+.form-group.checkbox input[type="checkbox"]:checked + label {
+    color: #00ffc8;
+}
+
+.claim-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #00ffc8, #00ff8a);
+    border: none;
+    border-radius: 12px;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(0, 255, 200, 0.25);
+    will-change: transform;
+}
+
+.claim-submit-btn:hover {
+    box-shadow: 0 10px 30px rgba(0, 255, 200, 0.4);
+    transform: translateY(-2px);
+}
+
+.claim-submit-btn:active {
+    transform: translateY(0);
+}
+
+.claim-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* DOWNLOAD SECTION */
+
+.download-section {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.5px solid rgba(34, 197, 94, 0.2);
+    border-radius: 20px;
+    margin-top: 30px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: slideInDown 0.6s ease both;
+}
+
+.download-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+.download-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.download-item {
+    background: rgba(34, 197, 94, 0.05);
+    border: 1.5px solid rgba(34, 197, 94, 0.3);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.3s ease;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.download-item:nth-child(1) { animation-delay: 0.05s; }
+.download-item:nth-child(2) { animation-delay: 0.1s; }
+.download-item:nth-child(3) { animation-delay: 0.15s; }
+.download-item:nth-child(4) { animation-delay: 0.2s; }
+
+.download-item:hover {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.5);
+    transform: translateY(-6px);
+}
+
+.download-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+    transition: transform 0.2s ease;
+}
+
+.download-item:hover .download-icon {
+    transform: scale(1.1);
+}
+
+.download-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.download-info {
+    font-size: 12px;
+    color: #9aa3c1;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.download-btn:hover {
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.35);
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1.5px solid rgba(34, 197, 94, 0.5);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    animation: slideInDown 0.5s ease both;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+}
+
+.success-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+    animation: bounceIn 0.5s ease both;
+}
+
+.success-text {
+    color: #22c55e;
+    font-weight: 700;
+    margin-bottom: 8px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.success-subtext {
+    color: #9aa3c1;
+    font-size: 13px;
+    animation: fadeInUp 0.7s ease both;
+}
+
+@media (max-width: 768px) {
+    .claim-container {
+        grid-template-columns: 1fr;
+    }
+
+    .download-items {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - UnderWater RP</title>
+    <link rel="stylesheet" href="signin-styles.css">
+</head>
+<body>
+    <!-- Background dinámico -->
+    <div class="background" id="background"></div>
+
+    <!-- Contenedor principal -->
+    <div class="signin-container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">UNDERWATER</span>
+            </a>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="signin-content">
+            <!-- Sección izquierda -->
+            <div class="left-section">
+                <h1>Bienvenido a<br><span class="highlight">UnderWater RP</span></h1>
+                
+                <p class="subtitle">
+                    Comunidad de Roleplay de MTA Nueva
+                </p>
+
+                <!-- Características -->
+                <div class="features">
+                    <div class="feature-box">
+                        <span class="feature-icon">👥</span>
+                        <span class="feature-text">Comunidad inactiva</span>
+                    </div>
+                    <div class="feature-box">
+                        <span class="feature-icon">🎉</span>
+                        <span class="feature-text">Eventos exclusivos</span>
+                    </div>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">0+</div>
+                        <div class="stat-label">Usuarios activos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección derecha (Login) -->
+            <div class="right-section">
+                <div class="login-box">
+                    <h2>Iniciar Sesión</h2>
+                    <p class="login-subtitle">Conecta tu cuenta de Discord para continuar</p>
+
+                    <!-- Botón Discord -->
+                    <button class="discord-button" onclick="loginDiscord()">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M16.92 0H3.08A1.5 1.5 0 001.6 1.5v15.8A1.5 1.5 0 003.08 19h13.84a1.5 1.5 0 001.48-1.5V1.5a1.5 1.5 0 00-1.48-1.5zM11.3 15.93h-1.92V6.65h1.92v9.28zM10.26 5.8a1.13 1.13 0 110-2.26 1.13 1.13 0 010 2.26zM16.92 15.93h-1.92v-3.04c0-.73-.02-1.66-.99-1.66-.99 0-1.14.78-1.14 1.57v3.13h-1.92V6.65h1.84v.85h.03c.26-.5.9-1.02 1.84-1.02 1.97 0 2.33 1.3 2.33 2.98v6.47z"/>
+                        </svg>
+                        Continuar con Discord
+                        <span class="arrow">›</span>
+                    </button>
+
+                    <!-- Información de seguridad -->
+                    <div class="security-info">
+                        <div class="info-item">
+                            <span class="info-icon">🔒</span>
+                            <div>
+                                <div class="info-title">Conexión segura</div>
+                                <div class="info-text">Utilizamos OAuth2 de Discord</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✨</span>
+                            <div>
+                                <div class="info-title">Primera vez?</div>
+                                <div class="info-text">Te guiaremos paso a paso</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer legal -->
+                    <div class="legal-text">
+                        Al continuar, aceptas nuestros 
+                        <a href="#">Términos de Servicio</a> y 
+                        <a href="#">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 UnderWater RP. Todos los derechos reservados.</p>
+                        <p>© 2026 ETVX La Tienda Que Puso Mi Server Bonito.</p>
+        </footer>
+    </div>
+
+    <script src="signin-script.js"></script>
+</body>
+</html>

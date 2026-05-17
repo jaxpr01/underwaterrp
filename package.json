@@ -1,0 +1,11 @@
+{
+  "name": "underwater-status",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "update-status": "node scripts/update-mta-status.js"
+  },
+  "dependencies": {
+    "gamedig": "5.3.2"
+  }
+}

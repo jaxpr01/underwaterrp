@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status - UnderWater</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-background"></div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">UW</div>
+                    <div>
+                        <div class="brand-title">UnderWater</div>
+                        <div class="brand-subtitle">Panel v2.0</div>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="avatar" id="profileAvatar">JA</div>
+                    <div>
+                        <div class="profile-name" id="profileName">jaxpr.a</div>
+                        <div class="profile-role">Usuario</div>
+                        <div class="profile-status"><span class="status-dot"></span><span id="profileDays">0d</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="perfil.html" class="nav-item">Mi Perfil</a>
+                <a href="normativas.html" class="nav-item">Normativas</a>
+                <a href="server-status.html" class="nav-item active">Status</a>
+                <a href="gifts.html" class="nav-item">Regalos</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <div class="page-title">Server Status</div>
+                    <div class="page-status"><span class="status-dot green"></span>Online</div>
+                </div>
+            </header>
+
+            <section class="top-cards">
+                <div class="card">
+                    <h2>Estado del servidor MTA</h2>
+                    <div id="serverStatusContent">
+                        <p>Obteniendo estado...</p>
+                    </div>
+                    <div class="server-actions">
+                        <button id="refreshServerStatus">Actualizar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="panel.js"></script>
+</body>
+</html>

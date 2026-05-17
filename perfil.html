@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - UnderWater</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-background"></div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">UW</div>
+                    <div>
+                        <div class="brand-title">UnderWater</div>
+                        <div class="brand-subtitle">Panel v2.0</div>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="avatar" id="profileAvatar">JA</div>
+                    <div>
+                        <div class="profile-name" id="profileName">jaxpr.a</div>
+                        <div class="profile-role">Usuario</div>
+                        <div class="profile-status"><span class="status-dot"></span><span id="profileDays">46d</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="perfil.html" class="nav-item active">Mi Perfil</a>
+                <a href="normativas.html" class="nav-item">Normativas</a>
+                <a href="gifts.html" class="nav-item">Regalos</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <div class="page-title">Mi Perfil</div>
+                    <div class="page-status"><span class="status-dot green"></span>Online</div>
+                </div>
+            </header>
+
+            <section class="top-cards">
+                <div class="card welcome-card">
+                    <div class="profile-avatar-section">
+                        <div class="large-avatar" id="largeProfileAvatar">JA</div>
+                        <div class="profile-info">
+                            <div class="welcome-title" id="welcomeTitle">Bienvenido, jaxpr.a</div>
+                            <div class="welcome-subtitle">Gestiona tu información personal</div>
+                            <div class="welcome-meta" id="welcomeMeta">@jaxpr.a • 46d en el servidor</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card profile-progress">
+                    <div class="stat-heading">Información Personal</div>
+                    <div class="info-grid">
+                        <div class="info-row"><span>Nombre</span><strong id="discordName">-</strong></div>
+                        <div class="info-row"><span>Nombre de usuario</span><strong id="discordHandle">-</strong></div>
+                        <div class="info-row"><span>Correo Electrónico</span><strong id="discordEmail">-</strong></div>
+                        <div class="info-row"><span>ID de Discord</span><strong id="discordUserId">-</strong></div>
+                    </div>
+                </div>
+
+                <div class="stat-card requests-card">
+                    <div class="stat-heading">Cuentas Vinculadas</div>
+                    <div class="requests-grid">
+                        <div>
+                            <span>Discord ID</span>
+                            <small id="discordIdSmall">-</small>
+                        </div>
+                        <div>
+                            <span>Miembro desde</span>
+                            <small id="memberDays">-</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="panel.js"></script>
+</body>
+</html>

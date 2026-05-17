@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamar Regalos - UnderWater</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="gift-claim-styles.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-background"></div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">UW</div>
+                    <div>
+                        <div class="brand-title">UnderWater</div>
+                        <div class="brand-subtitle">Panel v2.0</div>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="avatar" id="profileAvatar">JA</div>
+                    <div>
+                        <div class="profile-name" id="profileName">jaxpr.a</div>
+                        <div class="profile-role">Usuario</div>
+                        <div class="profile-status"><span class="status-dot"></span><span id="profileDays">0d</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="perfil.html" class="nav-item">Mi Perfil</a>
+                <a href="normativas.html" class="nav-item">Normativas</a>
+                <a href="gifts.html" class="nav-item active">Regalos</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <div class="page-title">Reclamar Regalos</div>
+                    <div class="page-status"><span class="status-dot green"></span>Online</div>
+                </div>
+            </header>
+
+            <section class="claim-container">
+                <div class="claim-summary">
+                    <h2>Resumen de tu Compra</h2>
+                    <div id="claimItemsContainer" class="claim-items">
+                        <!-- Los items se cargarán aquí -->
+                    </div>
+                    <div class="claim-total">
+                        <span>Total:</span>
+                        <span id="claimTotal">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="claim-form">
+                    <h2>Información para Reclamar</h2>
+                    <form id="claimFormElement" onsubmit="submitClaim(event)">
+                        <div class="form-group">
+                            <label for="claimName">Nombre Completo</label>
+                            <input type="text" id="claimName" required placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="claimEmail">Correo Electrónico</label>
+                            <input type="email" id="claimEmail" required placeholder="tu@correo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="claimPhone">Teléfono (Opcional)</label>
+                            <input type="tel" id="claimPhone" placeholder="+1 (555) 000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="claimNote">Nota Especial (Opcional)</label>
+                            <textarea id="claimNote" rows="4" placeholder="Cualquier nota adicional..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="claimAgree" required>
+                            <label for="claimAgree">He leído y acepto los términos y condiciones</label>
+                        </div>
+
+                        <button type="submit" class="claim-submit-btn">Confirmar y Descargar Regalos</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="download-section" id="downloadSection" style="display:none;">
+                <h2>Descarga tus Recursos</h2>
+                <div id="downloadItemsContainer" class="download-items">
+                    <!-- Los items para descargar se mostrarán aquí -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="panel.js"></script>
+    <script src="gift-claim-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UnderWater</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-background"></div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">UW</div>
+                    <div>
+                        <div class="brand-title">UnderWater</div>
+                        <div class="brand-subtitle">Panel v2.0</div>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="avatar" id="profileAvatar">JA</div>
+                    <div>
+                        <div class="profile-name" id="profileName">jaxpr.a</div>
+                        <div class="profile-role">Usuario</div>
+                        <div class="profile-status"><span class="status-dot"></span><span id="profileDays">0d</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">Dashboard</a>
+                <a href="perfil.html" class="nav-item">Mi Perfil</a>
+                <a href="normativas.html" class="nav-item">Normativas</a>
+                <a href="server-status.html" class="nav-item">Status</a>
+                <a href="gifts.html" class="nav-item">Regalos</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="nav-item logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <div class="page-title">Dashboard</div>
+                    <div class="page-status"><span class="status-dot green"></span>Online</div>
+                </div>
+            </header>
+
+            <section class="top-cards">
+                <div class="card welcome-card">
+                    <div class="welcome-header">
+                        <div>
+                            <div class="welcome-title" id="welcomeTitle">Bienvenido, jaxpr.a</div>
+                            <div class="welcome-subtitle">Usuario</div>
+                        </div>
+                        <div class="welcome-meta" id="welcomeMeta">@jaxpr.a • 0d en el servidor</div>
+                    </div>
+                    <div class="welcome-actions">
+                        <button onclick="window.location.href='perfil.html'">Perfil</button>
+                        <button onclick="window.location.href='gifts.html'">Regalos</button>
+                        <button onclick="window.location.href='server-status.html'">Status</button>
+                    </div>
+                </div>
+
+            </section>
+            
+        </main>
+    </div>
+    <script src="panel.js"></script>
+</body>
+</html>
